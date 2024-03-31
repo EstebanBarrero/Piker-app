@@ -39,10 +39,6 @@ const ColorPicker =({color, handleChangeColor, handleSumitSaveColor}) => {
     );
 };
 
-<<<<<<< HEAD
-export default ColorPicker
-=======
-
 
 export default ColorPicker;
->>>>>>> b2922bcf9ef51bc44ab0296104269618e9422269
+
