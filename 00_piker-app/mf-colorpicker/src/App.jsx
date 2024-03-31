@@ -1,13 +1,21 @@
 import React from "react";
-import ReactDOM from "react-dom/client";
+import ReactDOM from "react-dom";
+import ColorPicker from "./components/ColorPicker";
+import { useColor } from "./hooks/useColors";
 
 import "./index.css";
 
-import ColorPicker from "./components/ColorPicker";
+const App = () => {
+  const {color,handleChangeColor, handleSubmitSaveColor } = useColor();
 
-const App = () => (
-  <div className="container">
-    <ColorPicker />
-  </div>
-);
-ReactDOM.createRoot(document.getElementById("app")).render(<App />);
+  return (
+    <div className="container">
+      <ColorPicker
+      color={color}
+      handleChangeColor={handleChangeColor}
+      handleSubmitSaveColor={handleSubmitSaveColor}
+      />
+    </div>
+  );
+};
+ReactDOM.render(<App />, document.getElementById("app"));
