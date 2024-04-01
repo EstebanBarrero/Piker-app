@@ -1,8 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-import ColorPicker from "ColorPicker/ColorPicker";
-import ColorList from "ColorList/ColorList";
+import ColorPicker from "mfColorPicker/ColorPicker";
+import ColorList from "mfColorList/ColorList";
 
 const App = () => (
   <>
