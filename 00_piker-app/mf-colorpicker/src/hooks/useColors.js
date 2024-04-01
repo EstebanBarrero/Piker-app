@@ -13,6 +13,7 @@ export const useColor = () => {
         e.preventDefault();
 
         const copyColors = [color, ...colorsList];
+        
         setColorsList(copyColors)
     };
 
@@ -34,3 +35,5 @@ export const useColor = () => {
         handleClickClearColors,
     };
 };
+
+export default useColor;
