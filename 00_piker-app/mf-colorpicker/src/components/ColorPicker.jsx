@@ -1,9 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 
-const ColorPicker =({color, handleChangeColor, handleSumitSaveColor}) => {
-    return(
-        <>
-            <form onSubmit={handleSumitSaveColor}>
+const ColorPicker =() => {
+    
+    const [color, setColor] = useState("#000000")
+    const handleChangeColor = (e) => {
+        setColor(e.target.value)
+    };
+
+    const handleSumitSaveColor = (e) => {
+        e.preventDefault();
+        alert(color);
+    }
+
+    return <form onSubmit={handleSumitSaveColor}>
                 <input
                     type="color"
                     className="form control"
@@ -18,25 +27,23 @@ const ColorPicker =({color, handleChangeColor, handleSumitSaveColor}) => {
 
                 <div className="text-center">
                     <h2 className="mt-3 fw-bolder">
-                    <div
-                    style={{
-                        width: "20px",
-                        height: "20px",
-                        background:color,
-                        display: "inline-block",
-                        margin: "0 1rem",
-                        borderRadius:"100%",
-                    }}>
-                    </div>
+                        <div
+                            style={{
+                                width: "20px",
+                                height: "20px",
+                                background:color,
+                                display: "inline-block",
+                                margin: "0 1rem",
+                                borderRadius:"100%",
+                            }}>
+                        </div>
                     {color}
                     </h2>
                     <button type="submit" className="btn btn-success">
                         Guardar color
                     </button>
                 </div>
-            </form>
-        </>
-    );
+            </form>;
 };
 
 
