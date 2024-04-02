@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 
-const ColorPicker = ({ color, handleChangeColor, handleSumitSaveColor }) => {
+const ColorPicker = ({ color, handleChangeColor, handleSubmitSaveColor }) => {
 
     return (
         <>
-            <form onSubmit={handleSumitSaveColor}>
+            <form onSubmit={handleSubmitSaveColor}>
                 <input
                     type="color"
                     className="form control"
